@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "turbowind873746-website"
+  title: "Website do repositório turbowind873746"
   navbar:
     left:
       - href: index.qmd
