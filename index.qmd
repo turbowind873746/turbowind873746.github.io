@@ -1,3 +1,5 @@
 ---
 title: "Website do repositório turbowind873746"
 ---
+
+[Predição da perda de máteria seca em grãos de soja utilizando algoritmos de aprendizado de máquina](soybean-dml-machine-learning.html)
