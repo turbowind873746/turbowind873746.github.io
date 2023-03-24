@@ -2668,7 +2668,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">23-03-2023</p>
+      <p class="date">24-03-2023</p>
     </div>
   </div>
   
@@ -2845,7 +2845,7 @@ $ bu          &lt;dbl&gt; 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12
 </div>
 </div>
 </div>
-<p>Observando a <a href="#fig-inter-model">Figura 3</a> nota-se uma melhora no desempenho do modelo. É possível continuar adicionando interações ao modelo, como as interações de segundo grau. Embora seja possível, não parece ser a estratégia mais viável no momento, visto que demandaria muito tempo e trabalho explorar todas as interações possíveis. Além disso, a verdadeira relação entre as variáveis preditoras não parece ser linear.</p>
+<p>Observando a <a href="#fig-inter-model">Figura 3</a> nota-se uma melhora no desempenho do modelo. É possível também adicionar termos de maior grau junto aos termos com interações, como por exemplo quadrático ou cúbico. Embora seja possível, explorar as várias combinações de interações e graus possíveis para os termos não parece ser a estratégia mais viável no momento. Além disso, a verdadeira relação entre as variáveis preditoras não parece ser linear.</p>
 <p>Uma estratégia mais eficiente seria utilizar modelos mais flexíveis como random forest, vector support machines e neural networks. Uma vez que esses modelos possuem hiper-parâmetros, se faz necessário estimá-los utilizando validação cruzada. Para estimar ou tunar os hiper-parâmetros desses modelos é necessário marcá-los com a sentença <code>tune()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>svm_r_spec <span class="ot">&lt;-</span> <span class="fu">svm_rbf</span>(<span class="at">cost =</span> <span class="fu">tune</span>(), <span class="at">rbf_sigma =</span> <span class="fu">tune</span>()) <span class="sc">|&gt;</span></span>
@@ -2959,7 +2959,7 @@ $ bu          &lt;dbl&gt; 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12
 </div>
 </div>
 </div>
-<p>Uma métrica muito utilizada para se avaliar o desempenho de modelos é a raiz quadrada do erro quadrático médio (RMSE), que é o desvio padrão dos resíduos (valores observados - valores preditos). Nota-se na Figura 4 que todos os modelos obtiveram elevado desempenho, (<span class="math inline">\(RMSE_{max} = 0,5\)</span>).</p>
+<p>Uma métrica muito utilizada para se avaliar o desempenho de modelos é a raiz quadrada do erro quadrático médio (RMSE), que é o desvio padrão dos resíduos (valores observados - valores preditos). Nota-se na Figura 4 que todos os modelos obtiveram elevado desempenho (<span class="math inline">\(RMSE_{max} = 0,5\)</span>).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># necessário finalizar os modelos com</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># os melhores parâmetros</span></span>
